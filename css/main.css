@@ -1,0 +1,249 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&family=Poppins:wght@100;200;300;400;500;600&display=swap');
+/*
+font-family: 'Nanum Gothic', sans-serif;
+font-family: 'Poppins', sans-serif;
+*/
+*{box-sizing: border-box; font-family: 'Poppins', 'Nanum Gothic', sans-serif;}
+html, body{margin: 0; padding: 0;}
+h1, h2,h3, h4, h5, h6, p{margin: 0;}
+ul, ol{margin: 0; padding: 0; list-style: none;}
+a{text-decoration: none;}
+
+
+/* 사용자 설정 */
+#user_select{
+  text-align: center;
+}
+#user_select h2{
+  background-color: rgb(255, 204, 204);
+  color: #333;
+  font-size: 24px;
+  line-height: 1;
+  padding: 20px 0;
+}
+#user_select .cities{
+  padding: 20px 0 10px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+#user_select .cities button{
+  background-color: rgb(255, 204, 204);
+  border: none;
+  border-radius: 4px;
+  margin: 0 5px;
+  box-shadow: 1px 1px 2px rgba(51, 51, 51, 0.354);
+  color: #333;
+  margin-bottom: 10px;
+}
+#user_select .cities button:hover{
+  background-color: #fff;
+}
+#user_select .search{
+  width: 400px;
+  margin: 0 auto;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+#user_select .search input{
+  border: 1px solid rgb(255, 204, 204);
+  width: calc(100% - 120px);
+  height: 40px;
+  padding: 0 10px;
+  outline-color: rgb(255, 204, 204);
+}
+#user_select .search button{
+  width: 120px;
+  height: 40px;
+  border: none;
+  background-color: rgb(255, 204, 204);
+  color: #333;
+  cursor: pointer;
+}
+
+
+/* 날씨리스트 */
+#weather{
+  width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0 0;
+  background-color: #ebefef;
+}
+#weather ul{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+#weather ul li{
+  width: calc(100% / 3 - 20px);
+  margin: 0 10px 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: inset -2px -2px 4px rgba(255, 255, 255, 0.2), 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+#weather ul li .top{
+  padding: 20px 0;
+  background-color: rgb(255, 204, 204);
+  display: flex;
+  align-items: center;
+}
+#weather ul li .top > div{
+  width: 50%;
+  padding: 0 20px;
+}
+#weather ul li .top .cur_icon{
+  font-size: 60px;
+  text-align: center;
+  color: #333;
+}
+#weather ul li .top .info{
+  text-align: right;
+  color: #333;
+}
+#weather ul li .top .info .temp{
+  font-size: 16px;
+}
+#weather ul li .top .info .temp .degree{
+  font-size: 24px;
+}
+#weather ul li .top .info .interTemp{
+  font-size: 13px;
+}
+#weather ul li .top .info .interTemp span{
+  font-size: 15px;
+}
+#weather ul li .top .info h4{
+  font-size: 24px;
+}
+
+#weather ul li .top .location{
+  font-size: 14px;
+}
+
+
+
+#weather ul li .bottom{
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #333;
+}
+#weather ul li .bottom > div{
+  width: calc(100% / 3 - 20px);
+  text-align: center;
+  font-size: 14px;
+}
+#weather ul li .bottom > div i{
+  font-size: 18px; color: rgb(255, 204, 204);
+}
+#weather ul li .bottom > div p{
+  line-height: 1.6;
+}
+
+
+#dark{
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+#dark.active{
+  display: block;
+}
+#popup{
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 200px;
+  background-color: #fff;
+  text-align: center;
+  padding-top: 30px;
+}
+#popup.active{
+  display: block;
+}
+#popup h2{
+  
+}
+#popup p{
+  padding: 10px 0 20px;
+}
+#popup .one_h{
+  font-size: 14px;
+  color: #777;
+  text-decoration:underline;
+}
+#popup .close{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 20px;
+  height: 20px;
+  display: block;
+  line-height: 20px;
+  font-size: 18px;
+  color: white;
+  background-color: #777;
+  border-radius: 5px;
+}
+
+
+@media (max-width:1199px){
+  #weather{
+    width: 100%;;
+  }
+}
+@media (max-width:991px){
+  #weather ul li{
+    width: calc(100% / 2 - 20px);
+  }
+  #popup .close{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
+}
+@media (max-width:767px){
+  #weather ul li{
+    width: calc(100% - 20px);
+  }
+  #popup h2{
+    font-size: 20px;
+  }
+}
+@media (max-width:420px){
+  #user_select h2{
+    font-size: 16px;
+  }
+  #user_select .search{
+    width: 340px;
+  }
+  #popup{
+    width: 80%;
+    padding: 30px;
+  }
+  #popup h2{
+    font-size: 18px;
+  }
+  #popup p{
+    font-size: 14px;
+  }
+  #popup .one_h{
+    font-size: 12px;
+  }
+  #popup .close{
+    top: 10px;
+    right: 10px;
+  }
+}

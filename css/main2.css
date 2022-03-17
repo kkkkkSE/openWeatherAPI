@@ -1,0 +1,210 @@
+@charset "utf-8";
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&family=Poppins:wght@100;200;300;400;500;600&display=swap");
+/*
+font-family: 'Nanum Gothic', sans-serif;
+font-family: 'Poppins', sans-serif;
+*/
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", "Nanum Gothic", sans-serif;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  color: #333;
+  background-color: rgb(159, 225, 255);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+#wrap {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 50px 0;
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: space-around; */
+}
+#user_select {
+  width: 50%;
+  padding: 30px 40px 30px;
+  text-align: center;
+}
+#user_select h2 {
+  padding-bottom: 30px;
+}
+#user_select .cities {
+}
+#user_select .cities button {
+  background-color: #fff;
+  border: none;
+  border-radius: 10px;
+  margin: 0 5px;
+  box-shadow: 1px 1px 2px rgba(51, 51, 51, 0.354);
+  color: #333;
+  margin-bottom: 10px;
+}
+#user_select .cities button:hover,
+#user_select .cities button.active {
+  background-color: navy;
+  color: #fff;
+  box-shadow: 1px 1px 3px rgba(51, 51, 51, 0.5);
+}
+
+#weather {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#weather .top {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 80px;
+}
+#weather .left {
+  width: 50%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+#weather .left .cur_icon {
+  font-size: 60px;
+  padding-right: 20px;
+  line-height: 1;
+}
+#weather .left p {
+  font-size: 48px;
+}
+
+#weather .right {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#weather .right {
+}
+#weather .right > div {
+}
+
+#weather .right .info {
+  color: #333;
+  text-align: center;
+}
+#weather .right .info .interTemp {
+  font-size: 16px;
+}
+#weather .right .info .interTemp span {
+  font-size: 15px;
+}
+#weather .right .info .location {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+#weather .bottom {
+  padding-top: 20px;
+  display: flex;
+  align-items: center;
+  color: #333;
+  width: 50%;
+}
+#weather .bottom > div {
+  width: 100px;
+  text-align: center;
+  font-size: 14px;
+  border: 2px solid #fff;
+  margin: 0 10px;
+  border-radius: 5px;
+}
+#weather .bottom > div i {
+  display: block;
+  width: 100%;
+  background-color: #fff;
+  font-size: 24px;
+  color: rgb(159, 225, 255);
+  padding: 20px 0;
+}
+#weather .bottom > div p {
+  padding: 5px 0;
+  line-height: 1.6;
+}
+
+#dark {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+#dark.active {
+  display: block;
+}
+#popup {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 200px;
+  background-color: #fff;
+  text-align: center;
+}
+#popup.active {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#popup h2 {
+}
+#popup p {
+  padding: 10px 0 20px;
+}
+#popup .one_h {
+  font-size: 14px;
+  color: #777;
+  text-decoration: underline;
+}
+#popup .close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 20px;
+  height: 20px;
+  display: block;
+  line-height: 20px;
+  font-size: 18px;
+  color: white;
+  background-color: #777;
+  border-radius: 5px;
+}
+
+@media (max-width: 1199px) {
+  #wrap {
+    width: 100%;
+  }
+}
