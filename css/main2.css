@@ -13,7 +13,7 @@ body {
   margin: 0;
   padding: 0;
   color: #333;
-  background-color: rgb(159, 225, 255);
+  background-color: rgb(243, 234, 255);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -67,7 +67,7 @@ a {
 }
 #user_select .cities button:hover,
 #user_select .cities button.active {
-  background-color: navy;
+  background-color: rgb(118, 53, 118);
   color: #fff;
   box-shadow: 1px 1px 3px rgba(51, 51, 51, 0.5);
 }
@@ -151,7 +151,7 @@ a {
   display: block;
   width: 100%;
   font-size: 24px;
-  color: rgb(159, 225, 255);
+  color: rgb(118, 53, 118);
 }
 #weather .bottom > div p {
   padding: 5px 0;
